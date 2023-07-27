@@ -18,19 +18,19 @@ void printGPSEphem3(GPSEphem3* g) {
     printf("Эфермиды GPS (Required data + Optional data(big):\n");
     printf("\t %u %u %u \n", g->req.sv, g->req.tow, g->req.flags);
     printf("\t %d %d %d \n", g->req.iodc, g->req.toc, g->req.ura);
-    printf("\t %u %d %e \n", g->req.healthS, g->req.wn, g->req.tgd);
-    printf("\t %e %e %e \n", g->req.af2, g->req.af1, g->req.af0);
-    printf("\t %d %d %e \n", g->req.toe, g->req.iode, g->req.rootA);
-    printf("\t %e %e %e \n", g->req.ecc, g->req.m0, g->req.omega0);
-    printf("\t %e %e %e \n", g->req.inc0, g->req.argPer, g->req.deln);
-    printf("\t %e %e %e \n", g->req.omegaDot, g->req.incDot, g->req.crc);
-    printf("\t %e %e %e %e \n", g->req.crs, g->req.cuc, g->req.cic, g->req.cis);
+    printf("\t %u %d %f \n", g->req.healthS, g->req.wn, g->req.tgd);
+    printf("\t %f %f %f \n", g->req.af2, g->req.af1, g->req.af0);
+    printf("\t %d %d %f \n", g->req.toe, g->req.iode, g->req.rootA);
+    printf("\t %f %f %f \n", g->req.ecc, g->req.m0, g->req.omega0);
+    printf("\t %f %f %f \n", g->req.inc0, g->req.argPer, g->req.deln);
+    printf("\t %f %f %f \n", g->req.omegaDot, g->req.incDot, g->req.crc);
+    printf("\t %f %f %f %f \n", g->req.crs, g->req.cuc, g->req.cic, g->req.cis);
     printf("\t %u %d %d \n", g->opt.navType, g->opt.lTope, g->opt.lTopc);
-    printf("\t %e %e %d \n", g->opt.dADot, g->opt.fDelnDot, g->opt.cURAoe);
+    printf("\t %f %f %d \n", g->opt.dADot, g->opt.fDelnDot, g->opt.cURAoe);
     printf("\t %d %d %d \n", g->opt.cURAoc, g->opt.cURAoc1, g->opt.cURAoc2);
-    printf("\t %e %e \n", g->opt.isc.Isc1.fIscL1CA, g->opt.isc.Isc1.fIscL2C);
-    printf("\t %e %e \n", g->opt.isc.Isc1.fIscL5I5, g->opt.isc.Isc1.fIscL5Q5);
-    printf("\t %e %e %e \n", g->opt.isc.Isc2.fIscL1CP, g->opt.isc.Isc2.fIscL1CD, g->opt.DAf0);
+    printf("\t %f %f \n", g->opt.isc.Isc1.fIscL1CA, g->opt.isc.Isc1.fIscL2C);
+    printf("\t %f %f \n", g->opt.isc.Isc1.fIscL5I5, g->opt.isc.Isc1.fIscL5Q5);
+    printf("\t %f %f %f \n", g->opt.isc.Isc2.fIscL1CP, g->opt.isc.Isc2.fIscL1CD, g->opt.DAf0);
     printf("Контрольная сумма: \t Заданная: %u \n", g->cs);
 }
 
@@ -40,18 +40,18 @@ void printGPSEphem2(GPSEphem2* g) {
 printf("Эфермиды GPS (Required data + Optional data(small)): \n");
     printf("\t %u %u %u \n", g->req.sv, g->req.tow, g->req.flags);
     printf("\t %d %d %d \n", g->req.iodc, g->req.toc, g->req.ura);
-    printf("\t %u %d %e \n", g->req.healthS, g->req.wn, g->req.tgd);
-    printf("\t %e %e %e \n", g->req.af2, g->req.af1, g->req.af0);
-    printf("\t %d %d %e \n", g->req.toe, g->req.iode, g->req.rootA);
-    printf("\t %e %e %e \n", g->req.ecc, g->req.m0, g->req.omega0);
-    printf("\t %e %e %e \n", g->req.inc0, g->req.argPer, g->req.deln);
-    printf("\t %e %e %e \n", g->req.omegaDot, g->req.incDot, g->req.crc);
-    printf("\t %e %e %e %e \n", g->req.crs, g->req.cuc, g->req.cic, g->req.cis);
+    printf("\t %u %d %f \n", g->req.healthS, g->req.wn, g->req.tgd);
+    printf("\t %f %f %f \n", g->req.af2, g->req.af1, g->req.af0);
+    printf("\t %d %d %f \n", g->req.toe, g->req.iode, g->req.rootA);
+    printf("\t %f %f %f \n", g->req.ecc, g->req.m0, g->req.omega0);
+    printf("\t %f %f %f \n", g->req.inc0, g->req.argPer, g->req.deln);
+    printf("\t %f %f %f \n", g->req.omegaDot, g->req.incDot, g->req.crc);
+    printf("\t %f %f %f %f \n", g->req.crs, g->req.cuc, g->req.cic, g->req.cis);
     printf("\t %u %d %d \n", g->opt.navType, g->opt.lTope, g->opt.lTopc);
-    printf("\t %e %e %d \n", g->opt.dADot, g->opt.fDelnDot, g->opt.cURAoe);
+    printf("\t %f %f %d \n", g->opt.dADot, g->opt.fDelnDot, g->opt.cURAoe);
     printf("\t %d %d %d \n", g->opt.cURAoc, g->opt.cURAoc1, g->opt.cURAoc2);
-    printf("\t %e %e \n", g->opt.isc.fIscL1CA, g->opt.isc.fIscL2C);
-    printf("\t %e %e \n", g->opt.isc.fIscL5I5, g->opt.isc.fIscL5Q5);
+    printf("\t %f %f \n", g->opt.isc.fIscL1CA, g->opt.isc.fIscL2C);
+    printf("\t %f %f \n", g->opt.isc.fIscL5I5, g->opt.isc.fIscL5Q5);
     printf("Контрольная сумма: \t Заданная: %u \n", g->cs);
 }
 
@@ -61,13 +61,13 @@ void printGPSEphem1(GPSEphem1* g) {
     printf("Эфемериды GPS (Only required data):\n");
     printf("\t %u %u %u \n", g->req.sv, g->req.tow, g->req.flags);
     printf("\t %d %d %d \n", g->req.iodc, g->req.toc, g->req.ura);
-    printf("\t %u %d %e \n", g->req.healthS, g->req.wn, g->req.tgd);
-    printf("\t %e %e %e \n", g->req.af2, g->req.af1, g->req.af0);
-    printf("\t %d %d %e \n", g->req.toe, g->req.iode, g->req.rootA);
-    printf("\t %e %e %e \n", g->req.ecc, g->req.m0, g->req.omega0);
-    printf("\t %e %e %e \n", g->req.inc0, g->req.argPer, g->req.deln);
-    printf("\t %e %e %e \n", g->req.omegaDot, g->req.incDot, g->req.crc);
-    printf("\t %e %e %e %e \n", g->req.crs, g->req.cuc, g->req.cic, g->req.cis);
+    printf("\t %u %d %f \n", g->req.healthS, g->req.wn, g->req.tgd);
+    printf("\t %f %f %f \n", g->req.af2, g->req.af1, g->req.af0);
+    printf("\t %d %d %f \n", g->req.toe, g->req.iode, g->req.rootA);
+    printf("\t %f %f %f \n", g->req.ecc, g->req.m0, g->req.omega0);
+    printf("\t %f %f %f \n", g->req.inc0, g->req.argPer, g->req.deln);
+    printf("\t %f %f %f \n", g->req.omegaDot, g->req.incDot, g->req.crc);
+    printf("\t %f %f %f %f \n", g->req.crs, g->req.cuc, g->req.cic, g->req.cis);
     printf("Контрольная сумма: \t Заданная: %u \n", g->cs);
 }
 
